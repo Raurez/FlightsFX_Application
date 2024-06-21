@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../estilos.css"
+           xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.raulRamirezBotella.flightsfx.FXMLMainViewController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="600.0">
+        <TableView fx:id="tablaVuelos" layoutY="-2.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+                   AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <columns>
+                <TableColumn fx:id="flightNumberColumn" prefWidth="139.0" text="Flight Number">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="flightNumber"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="destinationColumn" prefWidth="131.0" text="Destination">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="destination"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="departureColumn" minWidth="0.0" prefWidth="142.0" text="Departure">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="departure"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="durationColumn" prefWidth="186.0" text="Duration">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="duration"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+        <Label fx:id="lbFlightNumber" layoutX="14.0" layoutY="40.0" text="Flight Number:"/>
+        <Label fx:id="lbDeparture" layoutX="14.0" layoutY="90.0" text="Departure:"/>
+        <TextField fx:id="txtFlightNumber" layoutX="100.0" layoutY="36.0"/>
+        <TextField fx:id="txtDeparture" layoutX="80.0" layoutY="86.0" promptText="dd/mm/yyyy hh:mm"/>
+        <TextField fx:id="txtDuration" layoutX="330.0" layoutY="86.0" promptText="hh:mm"/>
+        <TextField fx:id="txtDestination" layoutX="342.0" layoutY="36.0"/>
+        <Label fx:id="lbDestination" layoutX="264.0" layoutY="40.0" text="Destination:"/>
+        <Label fx:id="lbDuration" layoutX="257.0" layoutY="90.0" text="Duration:"/>
+        <ChoiceBox fx:id="filterChoiceBox" layoutX="94.0" layoutY="138.0" prefHeight="25.0" prefWidth="310.0"/>
+        <Button fx:id="addButton" onAction="#addAction" layoutX="518.0" layoutY="36.0" mnemonicParsing="false"
+                prefHeight="25.0" prefWidth="49.0" text="Add"/>
+        <Button fx:id="deleteButton" onAction="#deleteAction" layoutX="518.0" layoutY="86.0" mnemonicParsing="false"
+                text="Delete"/>
+        <Button fx:id="chartButton" onAction="#mostrarGrafico" layoutX="439.0" layoutY="138.0" mnemonicParsing="false"
+                text="PieChart"/>
+    </AnchorPane>
+</SplitPane>

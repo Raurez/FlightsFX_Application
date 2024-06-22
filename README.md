@@ -13,8 +13,6 @@
 - 🛠️ **Detailed Information**: Access detailed flight information with ease.
 - 🎯 **Intuitive Interface**: Enjoy a user-friendly experience designed for efficiency.
 
-## Project Description
-
 ## How to Support
 
 - ⭐ Give the project a star (Star)
